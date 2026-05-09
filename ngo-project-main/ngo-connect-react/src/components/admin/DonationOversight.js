@@ -13,7 +13,7 @@ const DonationOversight = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          "http://localhost:8080/api/admin/donations",
+          "http://https://ngo-project-production.up.railway.app/api/admin/donations",
           {
             headers: { Authorization: `Bearer ${token}` },
           }

@@ -13,7 +13,7 @@ const VolunteerOversight = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        "http://localhost:8080/api/admin/volunteer-opportunities",
+        "http://https://ngo-project-production.up.railway.app/api/admin/volunteer-opportunities",
         authHeaders
       );
   // Ensure opportunities is always an array
@@ -33,7 +33,7 @@ const VolunteerOversight = () => {
   const handleApprove = async (id) => {
     try {
       await axios.post(
-        `http://localhost:8080/api/admin/volunteer-opportunities/${id}/approve`,
+        `http://https://ngo-project-production.up.railway.app/api/admin/volunteer-opportunities/${id}/approve`,
         {},
         authHeaders
       );
@@ -48,7 +48,7 @@ const VolunteerOversight = () => {
     if (window.confirm("Are you sure you want to reject this opportunity?")) {
       try {
         await axios.post(
-          `http://localhost:8080/api/admin/volunteer-opportunities/${id}/reject`,
+          `http://https://ngo-project-production.up.railway.app/api/admin/volunteer-opportunities/${id}/reject`,
           {},
           authHeaders
         );

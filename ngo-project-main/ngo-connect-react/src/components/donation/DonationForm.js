@@ -83,7 +83,7 @@ const DonationForm = ({ ngo, onBack }) => {
       
           try {
         // In a real app, you would call your API endpoint here
-        const response = await fetch('http://localhost:8080/api/donations', {
+        const response = await fetch('http://https://ngo-project-production.up.railway.app/api/donations', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -76,8 +76,8 @@ The Frontend will start on http://localhost:3000/ by default
 
 🔗 Default URLs
 Service URL
-Backend(Spring Boot) : http://localhost:8080/
-Test in browser or postman : http://localhost:8080/api/ngos
+Backend(Spring Boot) : http://https://ngo-project-production.up.railway.app/
+Test in browser or postman : http://https://ngo-project-production.up.railway.app/api/ngos
 
 Frontend (React) : https://localhost:3000/
 

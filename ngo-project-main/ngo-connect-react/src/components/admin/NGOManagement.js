@@ -36,7 +36,7 @@ const NGOManagement = () => {
       const params = statusFilter !== "ALL" ? `?status=${statusFilter}` : "";
 
       const response = await axios.get(
-        `http://localhost:8080/api/admin/ngos${params}`,
+        `http://https://ngo-project-production.up.railway.app/api/admin/ngos${params}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -58,7 +58,7 @@ const NGOManagement = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `http://localhost:8080/api/admin/ngos/${ngoId}`,
+        `http://https://ngo-project-production.up.railway.app/api/admin/ngos/${ngoId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -89,23 +89,23 @@ const NGOManagement = () => {
 
       switch (actionType) {
         case "APPROVE":
-          endpoint = `http://localhost:8080/api/admin/ngos/${selectedNGO.id}/approve`;
+          endpoint = `http://https://ngo-project-production.up.railway.app/api/admin/ngos/${selectedNGO.id}/approve`;
           payload.notes = actionNotes;
           break;
         case "REJECT":
-          endpoint = `http://localhost:8080/api/admin/ngos/${selectedNGO.id}/reject`;
+          endpoint = `http://https://ngo-project-production.up.railway.app/api/admin/ngos/${selectedNGO.id}/reject`;
           payload.reason = actionReason;
           break;
         case "SUSPEND":
-          endpoint = `http://localhost:8080/api/admin/ngos/${selectedNGO.id}/suspend`;
+          endpoint = `http://https://ngo-project-production.up.railway.app/api/admin/ngos/${selectedNGO.id}/suspend`;
           payload.reason = actionReason;
           break;
         case "DEACTIVATE":
-          endpoint = `http://localhost:8080/api/admin/ngos/${selectedNGO.id}/deactivate`;
+          endpoint = `http://https://ngo-project-production.up.railway.app/api/admin/ngos/${selectedNGO.id}/deactivate`;
           payload.reason = actionReason;
           break;
         case "REACTIVATE":
-          endpoint = `http://localhost:8080/api/admin/ngos/${selectedNGO.id}/reactivate`;
+          endpoint = `http://https://ngo-project-production.up.railway.app/api/admin/ngos/${selectedNGO.id}/reactivate`;
           payload.notes = actionNotes;
           break;
         default:

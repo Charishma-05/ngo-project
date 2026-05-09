@@ -49,7 +49,7 @@ const UserManagement = () => {
       const paramString = params.toString();
 
       const response = await axios.get(
-        `http://localhost:8080/api/admin/users${
+        `http://https://ngo-project-production.up.railway.app/api/admin/users${
           paramString ? `?${paramString}` : ""
         }`,
         {
@@ -73,7 +73,7 @@ const UserManagement = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `http://localhost:8080/api/admin/users/${userId}`,
+        `http://https://ngo-project-production.up.railway.app/api/admin/users/${userId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -86,7 +86,7 @@ const UserManagement = () => {
 
       // Fetch user activity
       const activityResponse = await axios.get(
-        `http://localhost:8080/api/admin/users/${userId}/activity`,
+        `http://https://ngo-project-production.up.railway.app/api/admin/users/${userId}/activity`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -117,15 +117,15 @@ const UserManagement = () => {
 
       switch (actionType) {
         case "RESET_PASSWORD":
-          endpoint = `http://localhost:8080/api/admin/users/${selectedUser.id}/reset-password`;
+          endpoint = `http://https://ngo-project-production.up.railway.app/api/admin/users/${selectedUser.id}/reset-password`;
           payload.newPassword = newPassword;
           break;
         case "BLOCK":
-          endpoint = `http://localhost:8080/api/admin/users/${selectedUser.id}/block`;
+          endpoint = `http://https://ngo-project-production.up.railway.app/api/admin/users/${selectedUser.id}/block`;
           payload.reason = actionReason;
           break;
         case "UNBLOCK":
-          endpoint = `http://localhost:8080/api/admin/users/${selectedUser.id}/unblock`;
+          endpoint = `http://https://ngo-project-production.up.railway.app/api/admin/users/${selectedUser.id}/unblock`;
           payload.notes = actionNotes;
           break;
         default:

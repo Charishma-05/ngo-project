@@ -20,7 +20,7 @@ const CreateFundReport = ({ ngoId, onReportCreated }) => {
 
     try {
       await axios.post(
-        `http://localhost:8080/api/transparency/reports/ngo/${ngoId}`,
+        `http://https://ngo-project-production.up.railway.app/api/transparency/reports/ngo/${ngoId}`,
         reportData,
         {
           headers: { Authorization: `Bearer ${token}` },

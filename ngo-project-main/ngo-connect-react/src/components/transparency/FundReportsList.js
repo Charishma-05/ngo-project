@@ -11,7 +11,7 @@ const FundReportsList = ({ ngoId }) => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `http://localhost:8080/api/transparency/reports/ngo/${ngoId}`
+          `http://https://ngo-project-production.up.railway.app/api/transparency/reports/ngo/${ngoId}`
         );
         setReports(response.data);
         setLoading(false);

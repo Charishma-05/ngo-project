@@ -19,7 +19,7 @@ const AdminDashboard = () => {
 
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        "http://localhost:8080/api/admin/dashboard",
+        "http://https://ngo-project-production.up.railway.app/api/admin/dashboard",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -46,7 +46,7 @@ const AdminDashboard = () => {
       const reviewerNotes = prompt("Enter reviewer notes (optional):") || "";
 
       await axios.post(
-        `http://localhost:8080/api/admin/ngo-verification/${verificationId}/approve`,
+        `http://https://ngo-project-production.up.railway.app/api/admin/ngo-verification/${verificationId}/approve`,
         {
           adminId: user.id,
           reviewerNotes: reviewerNotes,
@@ -80,7 +80,7 @@ const AdminDashboard = () => {
       }
 
       await axios.post(
-        `http://localhost:8080/api/admin/ngo-verification/${verificationId}/reject`,
+        `http://https://ngo-project-production.up.railway.app/api/admin/ngo-verification/${verificationId}/reject`,
         {
           adminId: user.id,
           reviewerNotes: reviewerNotes,
@@ -108,7 +108,7 @@ const AdminDashboard = () => {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        `http://localhost:8080/api/admin/alerts/${alertId}/resolve`,
+        `http://https://ngo-project-production.up.railway.app/api/admin/alerts/${alertId}/resolve`,
         {
           adminId: user.id,
         },

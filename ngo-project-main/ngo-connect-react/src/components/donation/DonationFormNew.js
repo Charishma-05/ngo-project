@@ -170,7 +170,7 @@ const DonationFormNew = ({ ngo, onBack, onSuccess }) => {
       }
 
       const response = await axios.post(
-        "http://localhost:8080/api/donations/process-dummy",
+        "http://https://ngo-project-production.up.railway.app/api/donations/process-dummy",
         donationData,
         {
           headers: {
